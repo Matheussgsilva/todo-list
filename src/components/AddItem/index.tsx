@@ -16,9 +16,16 @@ export function AddItem({ onEnter}: Props) {
         }
     }
 
+    const handleClick = () => {
+        if(inputText !== '') {
+            onEnter(inputText);
+            setInputText('')
+        }
+    }
+
     return (
         <C.Container>
-            <div className="image">➕</div>
+            <div className="image" onClick={handleClick}>➕</div>
             <input 
                 type="text"
                 placeholder='Adicione uma tarefa'

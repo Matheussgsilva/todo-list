@@ -10,6 +10,11 @@ export const Container = styled.div`
 
     .image {
         margin-right: 5px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.3);
+        }
     }
 
     input {
